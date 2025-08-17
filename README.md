@@ -10,7 +10,7 @@ A simple yet production-ready **Laravel REST API** project with two types of rol
 
 * **Authentication:** JWT-based login/registration, password reset via email, token refresh
 * **Book Management:** Add/update/delete books, search & filter
-* **Location-based Search:** Search nearby books/donors using latitude/longitude
+* **Location-based Search:** Search nearby books using latitude/longitude
 * **Admin Panel APIs:** User management, book management
 
 ---
@@ -34,7 +34,7 @@ A simple yet production-ready **Laravel REST API** project with two types of rol
    cp .env.example .env
    php artisan key:generate
    ```
-4. Run migrations & seeders:
+4. Generate JWT secret key:
 
    ```bash
    php artisan jwt:secret
@@ -69,17 +69,9 @@ A simple yet production-ready **Laravel REST API** project with two types of rol
 ## Admin API
 * **GET** `/api/admin/users` → View All Users
 * **GET** `/api/admin/books` → View All Books
-* **GET** `/api/admin/books/{id}` → Delete a Book
+* **DELETE** `/api/admin/books/{id}` → Delete a Book
 
 
-
-
-
-## 📖 Contribution Guide
-
-1. Fork the repo & create a feature branch
-2. Write clean, documented code with tests
-3. Create a pull request with a clear description
 
 ---
 
